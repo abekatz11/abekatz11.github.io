@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Thing You -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Abe Katz</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="music.html">music</a></li>
+          <li><a href="woodwork.html">woodwork</a></li>
+          <li><a href="me.html">me</a></li>
+          <li class="active"><a href="#writing">writing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+	<!-- entries with embeds-->
+	<div class="writing-entry">
+		<button type="button" class="collapsible">
+		<h2>Integrity and Generative AI</h2>
+		<h4>23 april, 2023</h4>
+		</button>
+		<div class="content-collapse"></div>    
+	</div>
+	<p>[placeholder]</p>
+		
+<script>
+	$(document).ready(function() {
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+  		coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.display === "block") {
+		      content.style.display = "none";
+		    } else {
+		      $(content).load('title-keywords-abc.html');
+		      content.style.display = "block";
+		    }
+		  });
+		};
+	});
+</script>
+    </main>
+  </body>
+</html>
