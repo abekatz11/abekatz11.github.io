@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f1f1f1;
 }
 
 header {
@@ -26,11 +27,26 @@ nav a {
   padding: 1em;
 }
 
+nav li.active {
+  background-color: #666;
+}
+nav li.active a {
+  font-weight: bold;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em;
+}
+
+main li {
+	text-align: left;
+}
+
+.gear {
+	text-align: left;
 }
 
 section {
@@ -39,4 +55,129 @@ section {
   padding: 1em;
   text-align: center;
   width: 30%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.grid a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eee;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  height: 30px;
+}
+
+.gear-section {
+  background-color: #8DA09B;
+  padding: 20px;
+  color: #333;
+}
+
+.audio-section {
+  background-color: #EAEAEA;
+  padding: 20px;
+  width: 67%;
+}
+
+.releases-section {
+  background-color: #8DA09B;
+  color: #333;
+  width: 100%;
+  padding: 20px;
+}
+
+.writing-entry {
+/*  background-color: #8DA09B; */
+  color: #333;
+  width: 100%;
+  padding: 20px;
+}
+
+.groups-gigs-section {
+  background-color: #8DA09B;
+  color: #333;
+  padding: 20px;
+}
+
+.float-container {
+  width: 100%;
+}
+
+.float-child {
+  width: 49%;
+  float: left;
+}
+
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #A7A9B1;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.second_collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content-collapse {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
